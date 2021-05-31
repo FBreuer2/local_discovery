@@ -1,0 +1,11 @@
+syntax = "proto3";
+package LocalDiscovery;
+
+option go_package = ".;LocalDiscovery";
+
+message LocalAnnounce {
+    uint64 magic = 1;
+    uint32 port = 2;
+    repeated string addresses   = 3;
+    repeated string extra = 4;
+}
